@@ -1,0 +1,47 @@
+.Item {
+	padding-top: 70px;
+	padding-bottom: 20px;
+	.carousel-control {
+		padding-top: 2px;
+		z-index: 999999;
+		position: fixed;
+		top: 5px;
+		right: 10px;
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		background-color: @color-default;
+		-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+		-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+		box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+		img {
+			width: 90%;
+		}
+	}
+}
+///////////////////////////////////////////////////	tablet devices
+@media  (min-width : 768px)  {
+	.Item {
+		padding-top: 70px;
+		padding-bottom: 20px;
+		.carousel-control {
+			z-index: 9;
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding-top: 350px;
+			width: 155px;
+			height: 100%;
+			border-radius: none;
+			background-color: transparent;
+			box-shadow: none;
+			img {
+				width: 30%;
+			}
+		}
+	}
+}
+///////////////////////////////////////////////////	laptop and dekstop devices
+@media  (min-width : 981px) {
+	
+}
