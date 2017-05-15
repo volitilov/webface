@@ -6,6 +6,10 @@ j(function() {
     j('.carousel-indicator li').each(function() {
         count ++;
         j(this).attr('data-slider-to', count);
+
+        if (j(this).attr('data-slider-to') == 1) {
+            j(this).addClass('active');
+        }
     });
 
     // added attributes carousel-iner :::::::::::::::::::::::::::
@@ -14,13 +18,17 @@ j(function() {
     j('.carousel-inner .item').each(function() {
         count2 ++;
         j(this).attr('data-item', count2);
+
+        if (j(this).attr('data-item') == 1) {
+            j(this).addClass('active');
+        }
     });
 
     // added handler carousel-indicator :::::::::::::::::::::::::
     j('.carousel-indicator li').click(function() {
         var dataSlide = j(this).attr('data-slider-to');
 
-        // get item :::::::::::::::
+        // remove .active and add .active new item :::::::::::::::
         j('.carousel-inner .item').each(function() {
             var dataItem = j(this).attr('data-item');
 
@@ -34,13 +42,14 @@ j(function() {
 
         });
 
-        // get indicator :::::::::
+        // remove .active indicator :::::::::
         j('.carousel-indicator li').each(function() {
             if (j(this).hasClass('active')) {
                 j(this).removeClass('active');
             }
         });
 
+        // add .active new indicator
         j(this).addClass('active');
 
     });
@@ -68,8 +77,6 @@ j(function() {
         j('.carousel-indicator li').each(function() {
             if (j(this).hasClass('active')) {
                 j(this).removeClass('active');
-                j(this).removeClass('animated');
-                j(this).removeClass('bounceIn');
             }
         });
 
@@ -80,8 +87,6 @@ j(function() {
                 j('.carousel-indicator li').each(function() {
                     if (j(this).attr('data-slider-to') == 1) {
                         j(this).addClass('active');
-                        j(this).addClass('animated');
-                        j(this).addClass('bounceIn');
                     }
                 });
             } else {
@@ -89,8 +94,6 @@ j(function() {
                 j('.carousel-indicator li').each(function() {
                     if (j(this).attr('data-slider-to') == itemActive + 1) {
                         j(this).addClass('active');
-                        j(this).addClass('animated');
-                        j(this).addClass('bounceIn');
                     }
                 });
             }
@@ -103,8 +106,6 @@ j(function() {
                 j('.carousel-indicator li').each(function() {
                     if (j(this).attr('data-slider-to') == maxItem) {
                         j(this).addClass('active');
-                        j(this).addClass('animated');
-                        j(this).addClass('bounceIn');
                     }
                 });
             } else {
@@ -112,8 +113,6 @@ j(function() {
                  j('.carousel-indicator li').each(function() {
                     if (j(this).attr('data-slider-to') == (itemActive - 1)) {
                         j(this).addClass('active');
-                        j(this).addClass('animated');
-                        j(this).addClass('bounceIn');
                     }
                 });
             }

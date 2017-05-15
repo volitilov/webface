@@ -6,11 +6,11 @@ function addScript(src) {
 }
 
 // rules :::::::::::::::::::::::::::::::::::::::::::
-addScript('/js/rules/jquery.min.js');
+addScript('/static/js/rules/jquery.min.js');
 
 // my_scripts ::::::::::::::::::::::::::::::::::::::
-addScript('/js/my_scripts/link.js');
+addScript('/static/js/my_scripts/link.js');
 
 // widjets_scripts :::::::::::::::::::::::::::::::::
-addScript('/js/widjets/menu.js');
-addScript('/js/widjets/carousel.js');
+addScript('/static/js/widjets/menu.js');
+addScript('/static/js/widjets/carousel.js');

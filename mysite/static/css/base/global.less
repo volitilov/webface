@@ -1,19 +1,136 @@
 ///////////////////////////////////////////////////////////////
 body {
-	margin: 0;
-  // background-image: url('/images/bg.png');
+	// background-image: url('/static/img/bg.png');
 	background-color: #f2f2f2;
-  // background-image: linear-gradient(-45deg, #f2f2f2, #fff 33%, #fbfbfb 33%, #fbfbfb 66%, #fff 66%, #f2f2f2);
-  // font-family: 'PT Sans';
-  font-family: "Noto Serif",serif;
+  font-family: 'Open Sans','PT Sans';
+  text-rendering: optimizeLegibility;
 	font-size: 15px;
 	line-height: 1.42857143;
 	color: #666;
 }
+a, a:hover, a:focus {
+	outline: none;
+	text-decoration: none;
+	cursor: pointer;
+}
+div, section {
+  display: block;
+  position: relative;
+}
+main {
+  padding: 0px;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
 
-//////////////////////////////////////////////////////////////
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  .navbar {
+    display: none;
+  }
+}
 
-.inline-icon .pxlton, .inline-icon span {
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+figure {
+  margin: 0;
+}
+img {
+  vertical-align: middle;
+}
+span {
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -28,44 +145,4 @@ body {
 	p {
 		padding-bottom: 20px;
 	}
-}
-
-////////////////////////////////////////////////////////////
-.scrollyeah_shadow .scrollyeah__shadow_prev {
-  left: 0;
-}
-.scrollyeah__shadow_prev {
-  left: -10px;
-  background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,.3) 25%,rgba(0,0,0,.3) 75%,transparent),-webkit-radial-gradient(0 50%,farthest-side,rgba(0,0,0,.5),transparent);
-  background-image: linear-gradient(transparent,rgba(0,0,0,.3) 25%,rgba(0,0,0,.3) 75%,transparent),radial-gradient(0 50%,farthest-side,rgba(0,0,0,.5),transparent);
-  background-position: 0 0,0 0;
-  border-left: 1px solid #ddd;
-}
-.scrollyeah__shadow_next {
-  right: 0;
-}
-.scrollyeah__shadow_next {
-  right: -10px;
-  background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,.3) 25%,rgba(0,0,0,.3) 75%,transparent),-webkit-radial-gradient(100% 50%,farthest-side,rgba(0,0,0,.5),transparent);
-  background-image: linear-gradient(transparent,rgba(0,0,0,.3) 25%,rgba(0,0,0,.3) 75%,transparent),radial-gradient(100% 50%,farthest-side,rgba(0,0,0,.5),transparent);
-  background-position: 100% 0,100% 0;
-  border-right: 1px solid #ddd;
-}
-.scrollyeah__shadow {
-  display: block;
-  position: absolute;
-  text-decoration: none;
-  top: 0;
-  bottom: 0;
-  width: 10px;
-  height: auto;
-  -webkit-transition-property: left,right;
-  transition-property: left,right;
-  -webkit-transition-duration: 333ms,333ms;
-  transition-duration: 333ms,333ms;
-  -webkit-transition-timing-function: cubic-bezier(.1,0,.25,1),cubic-bezier(.1,0,.25,1);
-  transition-timing-function: cubic-bezier(.1,0,.25,1),cubic-bezier(.1,0,.25,1);
-  z-index: 10;
-  background-repeat: no-repeat;
-  background-size: 1px 100%,5px 100%;
 }

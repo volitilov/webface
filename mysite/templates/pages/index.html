@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	<section class="home">
+		{% include 'layout/_navbar.html' %}
+		<div class="body col-md-10">
+			<!-- slide 1 -->
+			<div class="menu-item slide-home animated bounceInLeft active">
+				<div class="logo">
+					<img src="{% static 'img/dribbble.gif' %}"/>
+				</div>
+				<div>
+					<h3>Your web developer.</h3>
+					<p>Разработка, доработка, дизайн, редизайн, поддержка персональных, 
+					<br>корпаративных вебсайтов.</p>
+				</div>
+				<div class="btns">
+					<a href="portfolio" class="btn-blue">Портфолио</a>
+					<a href="contacts" class="btn-blue-light">Контакты</a>
+				</div>
+			</div>
+
+			<!-- slide 2 -->
+			<div class="menu-item slide-about animated bounceInLeft">
+				<div class="col-md-3 about-me-small">
+					<div class="col-xs-12 im">
+						<img src="{% static 'img/foto.jpg' %}"/>
+						<h3>voli<font color="#22ACF5">T</font>ilov</h3>
+						<p>Web developer</p>
+					</div>
+				</div>
+				<div class="col-md-9 about-me-big">
+					<div class="about">
+						<h5>About me:</h5>
+						<p>Люблю веб-разработку и всё, что с ней связано, а ещё люблю музыку — играю на гитаре. 
+						Свободное время предпочитаю проводить с друзьями или за ноутбуком в поисках интересных 
+						web решений.</p>
+					</div>
+					<div class="experience">
+						<h5>Что умею.</h5>
+						<p>Кроссбраузерно верстаю сайты — фиксированные, резиновые или адаптивные. Придумываю и 
+						стилизую промежуточные состояния интерактивных элементов, если дизайнер их не нарисовал. 
+						Добавляю анимации, если требуется оживить макет. Пишу скрипты для логики на стороне клиента. 
+						Перед сдачей проекта оптимизирую производительность — сжимаю и склеиваю стили, 
+						скрипты и картинки. Использую современные технологии. Пишу чистый и понятный код, который 
+						легко поддерживать — это снижает стоимость будущих правок.</p>
+					</div>
+					<div class="skills">
+						<h5>Skills:</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.</p>
+						<ul>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>Less</li>
+							<li>JS</li>
+							<li>EJS</li>
+							<li>jQuery</li>
+							<li>Python</li>
+							<li>flask</li>
+							<li>Django</li>
+							<li>gulp</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- slide 3 -->
+			<div class="menu-item slide-portfolio animated bounceInLeft">
+				{% include 'widjets/_carousel.html' %}
+			</div>
+
+			<!-- slide 4 -->
+			<div class="menu-item slide-services animated bounceInLeft">
+				<div class="col-md-6">
+					<h3>Services:</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+					<ul>
+						<li>Development and interface design</li>
+						<li>Design mobile applications</li>
+						<li>Development and design sites</li>
+						<li>Optimizing websites</li>
+						<li>Redesign</li>
+						<li>Technical project support</li>
+						<li>Responsive design</li>
+						<li>Web animations</li>
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<h3>Как работаю</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+					<ol>
+						<li>Уточнение требований, формирование понимания задачи</li>
+						<li>Разделение проекта на небольшие этапы</li>
+						<li>Работа над одним из этапов</li>
+						<li>Демонстрация результата</li>
+						<li>Внесение необходимых правок</li>
+						<li>Утверждение и оплата этапа</li>
+						<li>Работа над следующим этапом</li>
+					</ol>
+				</div>
+				<div class="col-md-12">
+					<h3>Остались вопросы ?</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+
+			<!-- slide 5 -->
+			<div class="menu-item slide-contacts animated bounceInLeft">
+				<div class="col-xs-12 icon">
+					<a href="#" title="vk"><i class="fa fa-vk"></i></a>
+					<a href="#" title="facebook"><i class="fa fa-facebook"></i></a>
+					<a href="#" title="google-plus"><i class="fa fa-google-plus"></i></a>
+					<a href="#" title="odnoklassniki"><i class="fa fa-odnoklassniki"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+				</div>
+				<div class="col-xs-12 text-center or">
+					<p>or</p>
+				</div>
+				<div class="col-xs-12 form-contacts">
+					<form action="{% url 'feedback' %}" method="POST">
+						{% csrf_token %}
+						<fieldset>
+							<group>
+								<label>
+									<input class="alert" type="text" name="user_name" placeholder="name *" requred />
+									<legend>name</legend>
+								</label>
+								<label>
+									<input class="alert" type="text" name="user_email" placeholder="@ email address *" requred />
+									<legend>email</legend>
+								</label>
+								<label>
+									<input type="text" name="user_site" placeholder="websites" requred />
+									<legend>websites</legend>
+								</label>
+							</group>
+						</fieldset>
+						<fieldset>
+							<label>
+								<textarea type="text" name="user_msg" class="alert" rows="4" placeholder="text heare..." requred ></textarea>
+							</label>
+						</fieldset>
+						<fieldset>
+							<label>
+								<button class="btn-blue" type="submit">Отправить</button>
+							</label>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock content %}

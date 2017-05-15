@@ -1,45 +1,27 @@
 .freebie-item {
 	.freebie-image-wrapper {
 		padding: 0px;
-		-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-		box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-		.freebie-image {
+		img {
 			width: 100%;
-			border-radius: 4px;
-		}
-		.freebie-image {
 			display: block;
-			overflow: hidden;
 			position: relative;
+			border-radius: 4px;
+			box-shadow: 0 0.55556rem 1.11111rem -0.27778rem rgba(0,0,0,.15);
 		}
 	}
-	.b {
-		display: block;
-		margin-top: 15px;
-		.sp {
-			float: right;
-		}
-		svg {
-			margin-right: 5px;
-		}
+	.freebie-meta {
+		padding-left: 50px;
 	}
 	.freebie-meta-item {
 		display: block;
 		border-bottom: 1px solid #cecece;
 		padding: 12px 10px 10px;
-		color: #999;
 		h5 {
 			font-size: 11px;
 			font-weight: 400px;
 			color: #999;
 		}
-		p {
-			font-size: 14px;
-			color: #999;
-		}
-		svg {
-			margin-right: 5px;
-		}
+
 		ul {
 			padding: 0px;
 			li {
@@ -55,12 +37,30 @@
 			}
 		}
 	}
+	.freebie-btn {
+		ul {
+			padding: 0px;
+			li {
+				list-style: none;
+				padding: 10px 10px;
+				display: block;
+				a {
+					display: block;
+				}
+				i {
+					margin: 0px 5px;
+				}
+				.cnt {
+					margin-left: 20px;
+				}
+			}
+		}
+	}
 }
 ///////////////////////////////////////////////////	tablet devices
 @media  (min-width : 768px)  {
 	.freebie-item {
-		padding-left: 155px;
-		padding-right: 155px;
+		
 	}
 }
 ///////////////////////////////////////////////////	laptop and dekstop devices

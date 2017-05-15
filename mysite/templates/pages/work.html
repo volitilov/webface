@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	<section class="work">
+		<div class="work-nav">
+			<a href="/" title="Back to home">
+				<span>
+					<h3>voltilov</h3>
+					<p>Web developer</p>
+				</span>
+				<span><img src="{% static 'img/foto.jpg' %}"/></span>
+			</a>
+		</div>
+		<div class="widjet-carousel">
+			<!-- Wrapper for slides -->
+			<ul class="carousel-inner">
+				{% for w in works %}
+					<li class="item freebie-item">
+						<div class="col-xs-12 col-md-8 animated bounceInLeft">
+							<div class="freebie-image-wrapper">
+								<img src="{{ work.img_big.url }}"/>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-4 animated bounceInRight">
+							<div class="freebie-meta">
+								<div class="freebie-meta-item">
+									<h5>Title:</h5>
+									<p><strong>{{ work.title }}</strong></p>
+								</div>
+								<div class="freebie-meta-item">
+									<h5>Description:</h5>
+									<p>{{ work.description }}</p>
+								</div>
+								<div class="freebie-meta-item">
+									<h5>Technologies:</h5>
+									<ul>
+										<li>html</li>
+										<li>css</li>
+										<li>js</li>
+										<li>svg</li>
+										<li>animations</li>
+									</ul>
+								</div>
+								
+								<div class="freebie-btn">
+									<ul>
+										<li><a class="btn-blue-light" href="#">
+											<span><i class="material-icons">favorite_border</i></span>
+											<span>Like?</span>
+											<span class="cnt">{{ work.likes }}</span>
+										</a></li>
+										<li><a class="btn-blue">
+											<span><i class="material-icons">visibility</i></span>
+											<span>Preview</span>
+											<span class="cnt">236</span>
+										</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+
+			<!-- Controls -->
+			<a class="left carousel-control" href="#" role="button">
+				<span><i class="material-icons">chevron_left</i></span>
+			</a>
+			<a class="right carousel-control" href="#" role="button">
+				<span><i class="material-icons">chevron_right</i></span>
+			</a>
+
+		</div>
+	</section>
+{% endblock %}
