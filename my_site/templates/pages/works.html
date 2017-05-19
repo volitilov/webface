@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	<section class="work">
+		{% include 'layout/_work-nav.html' %}
+		<ul>
+			{% for w in work %}
+			    {% include 'layout/_freebie-item.html' %}
+			{% endfor %}
+		</ul>
+	</section>
+{% endblock %}
