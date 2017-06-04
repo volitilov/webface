@@ -1,0 +1,25 @@
+.pagination {
+	padding: 5px;
+	text-align: center;
+	.control-left, .control-right {
+		display: block;
+		transition: 0.3s;
+		padding: 6px;
+		color: @color-default;
+		i {
+			font-size: 30px;
+		}
+		&:hover, &:focus {
+			color: #CDF2FE;
+		}
+	}
+	.step-links {
+		span {
+			margin: 5px;
+		}
+	}
+	.current {
+		padding: 12px 20px;
+		color: @color-default;
+	}
+}

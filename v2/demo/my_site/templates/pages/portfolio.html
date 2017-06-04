@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	<div class="col-md-12 page-header">
+		<h4>Портфолио</h4>
+		<ul class="site-breadcrumbs">
+			<li><a href="/">Главная</a></li>
+			<li><i class="fa fa-angle-right"></i></li>
+			<li>Портфолио</li>
+		</ul>
+	</div>
+	<section class="col-xs-12 portfolio">
+		<ul>
+			<li>
+				<article class="col-xs-12 col-sm-6 col-md-4 portfolio-item comming_soon">
+					<div class="col-xs-12 wraper">
+						<div class="col-xs-12 media">
+								<img src="{% static 'img/coming_soon.gif' %}"/>
+						</div>
+						<div class="col-xs-12 details">
+							<p>В настоящий момент идёт активная работа над ещё одной работой
+							и в ближайшее время будет выложена. Непропустите )))</p>
+						</div>
+					</div>
+				</article>
+			</li>
+			{% for w in works %}
+			    {% include 'components/_portfolio-item.html' %}
+			{% endfor %}
+		</ul>
+	</section>
+{% endblock %}

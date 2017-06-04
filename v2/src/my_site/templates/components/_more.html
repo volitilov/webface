@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<div class="col-xs-12 more">
+	<div class="col-xs-12 content-name">
+		<h4>Другие работы:</h4>
+	</div>
+	<div class="col-xs-12 content-body">
+		<ul>
+			{% for w in works|slice:':4' %}
+				<li>
+					<article class="col-xs-12 col-sm-3">
+						<div class="col-xs-12 wraper">
+							<div class="col-xs-12 media">
+								<a href="{% url 'work' pk=w.pk %}">
+									<img src="{{ w.img_small.url }}"/>
+								</a>
+							</div>
+							<div class="col-xs-12 details">
+								<a href="{% url 'work' pk=w.pk %}">
+									<h2>{{ w.title }}</h2>
+								</a>
+							</div>
+						</div>
+					</article>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

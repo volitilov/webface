@@ -1,0 +1,56 @@
+{% load static %}
+<li class="freebie-item">
+	<div class="col-xs-12 col-md-8">
+		<div class="freebie-image-wrapper">
+			<img src="{{ w.img_big.url }}"/>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-4 animated bounceInRight">
+		<div class="freebie-meta">
+			<div class="freebie-meta-item">
+				<h5>Дата публикации:</h5>
+				<p><strong>{{ w.published_date }}</strong></p>
+			</div>
+			<div class="freebie-meta-item">
+				<h5>Название:</h5>
+				<p><strong>{{ w.title }}</strong></p>
+			</div>
+			<div class="freebie-meta-item">
+				<h5>Описание:</h5>
+				<p>{{ w.description }}</p>
+			</div>
+			<div class="freebie-meta-item">
+				<h5>Технологии:</h5>
+				<ul>
+					<li>html</li>
+					<li>css</li>
+					<li>js</li>
+					<li>svg</li>
+					<li>animations</li>
+				</ul>
+			</div>
+			
+			<div class="freebie-btn">
+				<ul>
+					<!-- <li><a class="btn-blue-light likes" href="{{ w.pk }}">
+						<span><i class="material-icons">favorite_border</i></span>
+						<span>Понравилось?</span>
+						<span class="cnt">{{ w.likes }}</span>
+					</a></li> -->
+					<li><a class="btn-blue-light" href="{{ w.download }}">
+						<span><i class="material-icons">favorite_border</i></span>
+						<span>Скачать</span>
+						<!-- <span class="cnt">{{ w.likes }}</span> -->
+					</a></li>
+
+					<li><a class="btn-blue" href="{{  w.project_url }}" target="_blank">
+						<span><i class="material-icons">visibility</i></span>
+						<span>Посмотреть</span>
+						<!-- <span class="cnt">{{ w.previews }}</span> -->
+					</a></li>
+				</ul>
+			</div>
+			{% include 'components/_paginator.html' %}
+		</div>
+	</div>
+</li>

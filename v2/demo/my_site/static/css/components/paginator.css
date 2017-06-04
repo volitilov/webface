@@ -1,0 +1,28 @@
+.pagination {
+  padding: 5px;
+  text-align: center;
+}
+.pagination .control-left,
+.pagination .control-right {
+  display: block;
+  transition: 0.3s;
+  padding: 6px;
+  color: #02a8f3;
+}
+.pagination .control-left i,
+.pagination .control-right i {
+  font-size: 30px;
+}
+.pagination .control-left:hover,
+.pagination .control-right:hover,
+.pagination .control-left:focus,
+.pagination .control-right:focus {
+  color: #CDF2FE;
+}
+.pagination .step-links span {
+  margin: 5px;
+}
+.pagination .current {
+  padding: 12px 20px;
+  color: #02a8f3;
+}

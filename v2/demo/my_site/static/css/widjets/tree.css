@@ -1,0 +1,23 @@
+.widjet-tree a {
+  display: block;
+}
+.widjet-tree i {
+  font-size: 30px;
+}
+.widjet-tree span:first-child {
+  transition: 0.2s;
+  transform: rotate(0deg);
+  margin-right: 10px;
+}
+.widjet-tree .tree {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 15px 40px;
+  background-color: #f7f7f7;
+}
+.widjet-tree .dropdown-togle {
+  display: none;
+  border-top: 1px solid #ddd;
+  padding: 20px 0px;
+  margin-top: 15px;
+}

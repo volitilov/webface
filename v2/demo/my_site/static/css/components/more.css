@@ -1,0 +1,43 @@
+.more {
+	margin-top: 50px;
+	padding: 0px;
+}
+.content-name h4 {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+}
+.more .content-body, .more .content-body li {
+	padding: 0;
+}
+.more .content-body li article {
+	margin: 0 0 20px;
+	padding: 0 10px;
+}
+.more .content-body li .media {
+	padding: 0;
+	overflow: hidden
+}
+.more .content-body li .media img {
+	border: 1px solid #eee;
+	border-radius: 3px;
+	border-bottom: 0;
+	display: block;
+	width: 100%;
+	box-shadow: #000 0 0 0;
+}
+.more .content-body li .details {
+	text-align: center;
+	border: 1px solid #eee;
+	padding: 20px;
+}
+.more .content-body li .details h2 {
+	font-size: 13px;
+	margin: 0;
+	font-weight: 500;
+}
+.more .content-body li .details a {
+	color: #666;
+}
+.more .content-body li .details a:hover {
+	text-decoration: underline !important;
+}

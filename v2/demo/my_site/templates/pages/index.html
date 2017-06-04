@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	<section class="col-xs-12 home">
+		<div class="col-xs-12 slide-home">
+			<div class="col-xs-12 col-md-6">
+				<h3>Я веб разработчик, делаю сайты.</h3>
+				<p>Разрабатываю с нуля, доработка существующих, редизайн сайтов,
+				очистка от неиспользуеммого кода, рефакторинг кода,
+				разработка отдельных элементов и скриптов.</p>
+				<div class="col-xs-12 btns">
+					<a href="{% url 'portfolio' %}" class="btn-blue-light">Портфолио</a>
+					<a href="{% url 'services' %}" class="btn-blue-light">Услуги</a>
+					<a href="{% url 'contacts' %}" class="btn-blue">Контакты</a>
+				</div>
+			</div>
+			<div class="col-md-6 logo">
+				<img src="{% static 'img/dribbble.gif' %}"/>
+			</div>
+		</div>
+	</section>
+	<section class="col-xs-12 portfolio">
+		<ul>
+			{% for w in works %}
+			    {% include 'components/_portfolio-item.html' %}
+			{% endfor %}
+		</ul>
+		<div class="col-xs-12 btns text-center">
+			<a href="{% url 'portfolio' %}" class="btn-blue">Смотреть все работы</a>
+		</div>
+	</section>
+{% endblock content %}
